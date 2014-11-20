@@ -18,7 +18,7 @@ return array(
     'menu' => array(
         'Dashboard' => array('type' => 'single', 'route' => 'cpanel.home'),
         'Media'     => array('type' => 'dropdown', 'links' => array(
-            'Manage Media' => array('route' => 'admin.media.index')            
+            'Manage Media' => array('route' => 'bayaan.media.index')            
         )),
         'Users'     => array('type' => 'dropdown', 'links' => array(
             'Manage Users' => array('route' => 'cpanel.users.index'),
@@ -43,10 +43,10 @@ return array(
         'users_permission' => 'cpanel::users.permission',
         
         // Media views
-        'media_index'      => 'admin::media.index',
-        'media_show'       => 'admin::media.show',
-        'media_edit'       => 'admin::media.edit',
-        'media_create'     => 'admin::media.create',
+        'media_index'      => 'bayaan::media.index',
+        'media_show'       => 'bayaan::media.show',
+        'media_edit'       => 'bayaan::media.edit',
+        'media_create'     => 'bayaan::media.create',
 
         //Groups Views
         'groups_index'      => 'cpanel::groups.index',
@@ -72,5 +72,8 @@ return array(
     'validation' => array(
         'user'       => 'Stevemo\Cpanel\Services\Validators\Users\Validator',
         'permission' => 'Stevemo\Cpanel\Services\Validators\Permissions\Validator',
+        'media'       => 'Shark\Bayaan\Services\Validators\Media\Validator',
+        'mediaTags' => 'Shark\Bayaan\Services\Validators\MediaTags\Validator',
+        
     ),
 );
